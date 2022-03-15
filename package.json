@@ -1,8 +1,12 @@
 {
   "name": "rnweb",
+  "volta": {
+    "node": "16.13.2"
+  },
   "packageManager": "yarn@3.2.0",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
+    "dev": "NODE_ENV=development next dev -H 0.0.0.0",
+    "dev:clean": "rm -r .next && yarn dev",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write .",
@@ -11,10 +15,11 @@
   "dependencies": {
     "@gorhom/bottom-sheet": "^4.1.5",
     "@tamagui/colors": "^1.0.0-alpha.64",
+    "@tamagui/feather-icons": "^1.0.0-alpha.64",
     "@tamagui/next-plugin": "^1.0.0-alpha.68",
     "next": "^12.1.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "18.0.0-rc.2",
+    "react-dom": "18.0.0-rc.2",
     "react-native": "^0.67.3",
     "react-native-gesture-handler": "^2.3.2",
     "react-native-reanimated": "^2.4.1",

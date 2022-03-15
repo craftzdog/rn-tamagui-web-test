@@ -1,9 +1,8 @@
-import withPlugins from 'next-compose-plugins'
-import * as tamagui from '@tamagui/next-plugin'
+const path = require("path");
+const withPlugins = require('next-compose-plugins')
+const { withTamagui } = require('@tamagui/next-plugin')
 
-const { withTamagui } = tamagui.default
-
-export default withPlugins([
+const transform = withPlugins([
   withTamagui({
     // your tamagui config
     config: './tamagui.config.ts',
@@ -20,3 +19,19 @@ export default withPlugins([
     excludeReactNativeWebExports: ['Switch', 'ProgressBar', 'Picker'],
   })
 ])
+
+module.exports = function (name, { defaultConfig }) {
+  defaultConfig.experimental.reactRoot = 'concurrent'
+  defaultConfig.typescript.ignoreBuildErrors = true
+  console.log('defaultConfig:', defaultConfig)
+  defaultConfig.webpack = (config, options) => {
+    config.resolve.alias = {
+      ...(config.resolve.alias || {}),
+      // Transform all direct `react-native` imports to `react-native-web`
+      "react-native$": "react-native-web",
+    }
+
+    return config
+  }
+  return transform(name, { defaultConfig })
+}

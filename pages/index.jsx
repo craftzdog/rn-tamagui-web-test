@@ -3,7 +3,7 @@ import { Button } from 'tamagui'
 const Home = () => {
   return (
     <div>
-      <Button>Button</Button>
+    hoge
     </div>
   )
 }

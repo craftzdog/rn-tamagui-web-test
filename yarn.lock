@@ -2407,6 +2407,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tamagui/feather-icons@npm:^1.0.0-alpha.64":
+  version: 1.0.0-alpha.64
+  resolution: "@tamagui/feather-icons@npm:1.0.0-alpha.64"
+  dependencies:
+    react: "*"
+    react-dom: "*"
+    react-native-svg: ^12.1.1
+  checksum: cff6aceca5bcd931b8f8940c5d3403354c0dce8c99b5588d7ef5b7cbb983f99a17347d445203d382c4d4232e2068c5b97fd70ec88fc837786d119677acfee1fa
+  languageName: node
+  linkType: hard
+
 "@tamagui/helpers@npm:^1.0.0-alpha.64":
   version: 1.0.0-alpha.64
   resolution: "@tamagui/helpers@npm:1.0.0-alpha.64"
@@ -3871,7 +3882,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-select@npm:^4.1.3":
+"css-select@npm:^4.1.3, css-select@npm:^4.2.1":
   version: 4.2.1
   resolution: "css-select@npm:4.2.1"
   dependencies:
@@ -3884,7 +3895,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-tree@npm:^1.1.2, css-tree@npm:^1.1.3":
+"css-tree@npm:^1.0.0-alpha.39, css-tree@npm:^1.1.2, css-tree@npm:^1.1.3":
   version: 1.1.3
   resolution: "css-tree@npm:1.1.3"
   dependencies:
@@ -7984,7 +7995,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:*, react-dom@npm:^17.0.0":
+"react-dom@npm:*":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -7994,6 +8005,18 @@ __metadata:
   peerDependencies:
     react: 17.0.2
   checksum: 1c1eaa3bca7c7228d24b70932e3d7c99e70d1d04e13bb0843bbf321582bc25d7961d6b8a6978a58a598af2af496d1cedcfb1bf65f6b0960a0a8161cb8dab743c
+  languageName: node
+  linkType: hard
+
+"react-dom@npm:18.0.0-rc.2":
+  version: 18.0.0-rc.2
+  resolution: "react-dom@npm:18.0.0-rc.2"
+  dependencies:
+    loose-envify: ^1.1.0
+    scheduler: ^0.21.0-rc.2
+  peerDependencies:
+    react: ^18.0.0-rc.2
+  checksum: d22c2b7c84cb351b30b9d1542f5aafa7e45ab4c7d040dacc0a42f539a2606f92250530aaaffde8828bddf06f0645930ca9b260b932645fc2e824c6cba00b97d7
   languageName: node
   linkType: hard
 
@@ -8123,6 +8146,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-svg@npm:^12.1.1":
+  version: 12.3.0
+  resolution: "react-native-svg@npm:12.3.0"
+  dependencies:
+    css-select: ^4.2.1
+    css-tree: ^1.0.0-alpha.39
+  peerDependencies:
+    react: "*"
+    react-native: ">=0.50.0"
+  checksum: 9bed890d030819ed650fdc84ae8127f78f72a28d81a160dd574729b81f237c85be6a5ff4a0951b4dd28bd2836189f18afffef1fd6447fb3b6537c7ecd23f08c2
+  languageName: node
+  linkType: hard
+
 "react-native-web@npm:^0.17.7":
   version: 0.17.7
   resolution: "react-native-web@npm:0.17.7"
@@ -8197,13 +8233,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:*, react@npm:^17.0.0":
+"react@npm:*":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: b254cc17ce3011788330f7bbf383ab653c6848902d7936a87b09d835d091e3f295f7e9dd1597c6daac5dc80f90e778c8230218ba8ad599f74adcc11e33b9d61b
+  languageName: node
+  linkType: hard
+
+"react@npm:18.0.0-rc.2":
+  version: 18.0.0-rc.2
+  resolution: "react@npm:18.0.0-rc.2"
+  dependencies:
+    loose-envify: ^1.1.0
+  checksum: 9f12332e68d87b91bbb4e4cb857b486b04aed321f327a14f440226b6ef0fc8ea2f368ac75b33f4052a97fcb989db9ec7aa83adadd99eb1ad546f3fedc3363c26
   languageName: node
   linkType: hard
 
@@ -8503,12 +8548,13 @@ __metadata:
   dependencies:
     "@gorhom/bottom-sheet": ^4.1.5
     "@tamagui/colors": ^1.0.0-alpha.64
+    "@tamagui/feather-icons": ^1.0.0-alpha.64
     "@tamagui/next-plugin": ^1.0.0-alpha.68
     "@types/react": ^17.0.40
     babel-loader: ^8.2.3
     next: ^12.1.0
-    react: ^17.0.0
-    react-dom: ^17.0.0
+    react: 18.0.0-rc.2
+    react-dom: 18.0.0-rc.2
     react-native: ^0.67.3
     react-native-gesture-handler: ^2.3.2
     react-native-reanimated: ^2.4.1
@@ -8596,6 +8642,15 @@ __metadata:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.21.0-rc.2":
+  version: 0.21.0-rc.2-next-b9de50d2f-20220308
+  resolution: "scheduler@npm:0.21.0-rc.2-next-b9de50d2f-20220308"
+  dependencies:
+    loose-envify: ^1.1.0
+  checksum: 760b89623a0589727e7f2ae8eec5f34f3dde60e7fc762f8d86ce7ccccd28991479a2599a02d19f00aecda4b60aafb25f8e32f845c1f2c9dbd9bfbec6f9dea6e7
   languageName: node
   linkType: hard
 
