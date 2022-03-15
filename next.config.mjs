@@ -6,7 +6,7 @@ const { withTamagui } = tamagui.default
 export default withPlugins([
   withTamagui({
     // your tamagui config
-    config: './tamagui.config.js',
+    config: './tamagui.config.ts',
     // your design system (npm module name)
     components: ['tamagui'],
     // follow normalized imports matching these file names, attempt to evaluate
