@@ -1,5 +1,11 @@
+import { Button } from 'tamagui'
+
 const Home = () => {
-  return <div>Hello</div>
+  return (
+    <div>
+      <Button>Button</Button>
+    </div>
+  )
 }
 
 export default Home

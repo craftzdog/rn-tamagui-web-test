@@ -1,5 +1,5 @@
 {
-  "name": "rnweb2",
+  "name": "rnweb",
   "packageManager": "yarn@3.2.0",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
@@ -9,11 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@gorhom/bottom-sheet": "^4.1.5",
     "@tamagui/next-plugin": "^1.0.0-alpha.68",
     "next": "^12.1.0",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "react-native-gesture-handler": "^2.3.2",
+    "react-native-reanimated": "^2.4.1",
     "react-native-web": "^0.17.7",
     "tamagui": "^1.0.0-alpha.68"
+  },
+  "importSort": {
+    ".js, .jsx, .ts, .tsx": {
+      "style": "module",
+      "parser": "typescript"
+    }
+  },
+  "devDependencies": {
+    "babel-loader": "^8.2.3"
   }
 }
